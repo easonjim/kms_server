@@ -65,3 +65,6 @@ https://docs.microsoft.com/en-us/deployoffice/vlactivation/gvlks
 
 # windows_office_activation.bat
 fork by http://www.bewindoweb.com/240.html
+```shell
+must use administrator to run it.
+```

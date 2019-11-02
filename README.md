@@ -54,3 +54,11 @@ cscript ospp.vbs /act
 ## get activation status
 cscript ospp.vbs /dstatus
 ```
+
+# GVLK key
+## windows
+https://docs.microsoft.com/zh-cn/windows-server/get-started/kmsclientkeys
+## office
+https://docs.microsoft.com/zh-cn/previous-versions/office/office-2010/ee624355(v=office.14%29
+https://docs.microsoft.com/zh-cn/previous-versions/office/dn385360(v=office.15%29
+https://docs.microsoft.com/en-us/deployoffice/vlactivation/gvlks

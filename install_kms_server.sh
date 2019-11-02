@@ -22,8 +22,8 @@ wget https://github.com/Wind4/vlmcsd/releases/download/${VLMCSD_LATEST_VERSION}/
 
 # install
 mkdir ${VLMCSD_LATEST_VERSION}_binaries
-tar -zxvf ${VLMCSD_LATEST_VERSION}_binaries.tar.gz -C ${VLMCSD_LATEST_VERSION}_binaries
-mv ${VLMCSD_LATEST_VERSION}_binaries /opt/vlmcsd
+tar -zxvf ${VLMCSD_LATEST_VERSION}_binaries.tar.gz
+mv binaries /opt/vlmcsd
 chmod -R 777 /opt/vlmcsd
 
 # install service

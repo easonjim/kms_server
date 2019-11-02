@@ -18,11 +18,11 @@ get_latest_release_number() {
 VLMCSD_LATEST_VERSION=`get_latest_release_number "Wind4/vlmcsd"`
 
 # download file
-wget https://github.com/Wind4/vlmcsd/releases/download/${VLMCSD_LATEST_VERSION}/binaries.tar.gz -O $VLMCSD_LATEST_VERSION_binaries.tar.gz
+wget https://github.com/Wind4/vlmcsd/releases/download/${VLMCSD_LATEST_VERSION}/binaries.tar.gz -O ${VLMCSD_LATEST_VERSION}_binaries.tar.gz
 
 # install
-tar -zxvf $VLMCSD_LATEST_VERSION_binaries.tar.gz
-mv $VLMCSD_LATEST_VERSION_binaries /opt/vlmcsd
+tar -zxvf ${VLMCSD_LATEST_VERSION}_binaries.tar.gz
+mv ${VLMCSD_LATEST_VERSION}_binaries /opt/vlmcsd
 chmod -R 777 /opt/vlmcsd
 
 # install service

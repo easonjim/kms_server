@@ -21,6 +21,7 @@ VLMCSD_LATEST_VERSION=`get_latest_release_number "Wind4/vlmcsd"`
 wget https://github.com/Wind4/vlmcsd/releases/download/${VLMCSD_LATEST_VERSION}/binaries.tar.gz -O ${VLMCSD_LATEST_VERSION}_binaries.tar.gz
 
 # install
+mkdir ${VLMCSD_LATEST_VERSION}_binaries
 tar -zxvf ${VLMCSD_LATEST_VERSION}_binaries.tar.gz -C ${VLMCSD_LATEST_VERSION}_binaries
 mv ${VLMCSD_LATEST_VERSION}_binaries /opt/vlmcsd
 chmod -R 777 /opt/vlmcsd

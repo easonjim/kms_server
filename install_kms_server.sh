@@ -15,8 +15,7 @@ fi
 get_latest_release_number() {
   curl --silent "https://github.com/$1/releases/latest" | sed 's#.*tag/\(.*\)".*#\1#'
 }
-get_latest_release_number "Wind4/vlmcsd"
-VLMCSD_LATEST_VERSION=$?
+VLMCSD_LATEST_VERSION=`get_latest_release_number "Wind4/vlmcsd"`
 
 # download file
 wget https://github.com/Wind4/vlmcsd/releases/download/${VLMCSD_LATEST_VERSION}/binaries.tar.gz
@@ -89,8 +88,7 @@ do_start() {
         return 0
     fi
     $DAEMON
-    ps -ef | grep vlmcsd-x64-musl-static | grep -v grep | awk '{print $2}'
-    $PID=$?
+    $PID=`ps -ef | grep vlmcsd-x64-musl-static | grep -v grep | awk '{print $2}'`
     echo $PID > $PID_FILE
     if check_running; then
         echo "Starting $NAME success"

@@ -89,6 +89,7 @@ do_start() {
         return 0
     fi
     $DAEMON
+    sleep 1
     $PID=`ps -ef | grep vlmcsd-x64-musl-static | grep -v grep | awk '{print $2}'`
     echo $PID > $PID_FILE
     if check_running; then

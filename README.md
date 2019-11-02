@@ -26,3 +26,31 @@ service vlmcsd stop
 service vlmcsd status
 ```
 
+# use
+```shell
+# check
+{VLMCSD_PATH}\Windows\intel>vlmcs-Windows-x64.exe -v -l 3 ${IP/Domain}
+# windows
+cd /d "%SystemRoot%\system32"
+## set gvlk key
+slmgr /ipk ${GVLK Key}
+## set kms server
+slmgr /skms ${IP/Domain}
+## activation
+slmgr /ato
+## get activation status
+slmgr /xpr
+# office
+## 64 bit office
+cd /d "%ProgramFiles%\Microsoft Office\${Office15}"
+## 32 bit office
+cd /d "%ProgramFiles(x86)%\Microsoft Office\#{Office15}"
+## set gvlk key
+cscript ospp.vbs /inpkey:${GVLK KEY}
+## set kms server
+cscript ospp.vbs /sethst:${IP/Domain}
+## activation
+cscript ospp.vbs /act
+## get activation status
+cscript ospp.vbs /dstatus
+```
